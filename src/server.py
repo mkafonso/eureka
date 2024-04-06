@@ -1,12 +1,13 @@
 from flask import Flask, request
 from slackeventsapi import SlackEventAdapter
 from integrations.slack import SlackBot
+from integrations.langchain import initialize_langchain_model, process_langchain_query
 from utils.events import handle_app_mention, slack_event_queue
 from utils.sanitizers import sanitize_slack_message
 import threading
 
 # Função para configurar o servidor Flask e o Slack Bot
-def create_app(slack_api_token, slack_signing_secret):
+def create_app(slack_api_token, slack_signing_secret, openai_api_key):
     app = Flask(__name__)
 
     # Instancia o SlackBot com o token da API do Slack
@@ -14,6 +15,8 @@ def create_app(slack_api_token, slack_signing_secret):
 
     # Configura o adaptador de eventos do Slack para lidar com eventos POST em '/slack/events'
     slack_events_adapter = SlackEventAdapter(slack_signing_secret, "/slack/events", app)
+
+    chain = initialize_langchain_model(openai_api_key, './data.txt')
 
     # Define a rota para lidar com eventos do Slack
     @slack_events_adapter.on("app_mention")
@@ -29,8 +32,10 @@ def create_app(slack_api_token, slack_signing_secret):
             channel_id = event.get('channel')
             question = sanitize_slack_message(event.get('text'))
 
+            response = process_langchain_query(chain, question, [])
+
             # Processa a mensagem usando o SlackBot
-            slack_bot.run(channel=channel_id, message=question)
+            slack_bot.run(channel=channel_id, message=response)
 
             # Marca o evento como concluído na fila
             slack_event_queue.task_done()

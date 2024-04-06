@@ -1,4 +1,6 @@
 flask==2.3.3
+langchain==0.0.348
 python-dotenv==1.0.1
 slackeventsapi==3.0.1
 slack_sdk==3.27.1
+chromadb==0.4.24
