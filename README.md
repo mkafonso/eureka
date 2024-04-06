@@ -6,6 +6,9 @@ Eureka é um bot para Slack que utiliza tecnologias como LangChain e OpenAI para
 
 https://github.com/mkafonso/eureka/assets/73212666/0b9692b2-bc3d-48e1-bf4b-aa0b2a11cb11
 
+![Screen Shot 2024-04-06 at 17 38 38](https://github.com/mkafonso/eureka/assets/73212666/981d4ea8-99b7-4441-bb54-96d324b5fa51)
+
+
 ## Principais recursos até agora
 
 - ✅ O bot só responde quando é mencionado no canal do Slack
