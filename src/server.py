@@ -2,6 +2,7 @@ from flask import Flask, request
 from slackeventsapi import SlackEventAdapter
 from integrations.slack import SlackBot
 from utils.events import handle_app_mention, slack_event_queue
+from utils.sanitizers import sanitize_slack_message
 import threading
 
 # Função para configurar o servidor Flask e o Slack Bot
@@ -26,7 +27,7 @@ def create_app(slack_api_token, slack_signing_secret):
             payload = slack_event_queue.get()
             event = payload.get('event', {})
             channel_id = event.get('channel')
-            question = event.get('text')
+            question = sanitize_slack_message(event.get('text'))
 
             # Processa a mensagem usando o SlackBot
             slack_bot.run(channel=channel_id, message=question)
