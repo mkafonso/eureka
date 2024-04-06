@@ -5,9 +5,13 @@ Eureka é um bot para Slack que utiliza tecnologias como LangChain e OpenAI para
 ## Principais recursos até agora
 
 - ✅ O bot só responde quando é mencionado no canal do Slack
-- ✅ Utiliza LangChain e OpenAI para processar e responder a perguntas de forma inteligente
+- ✅ Utiliza LangChain e OpenAI para processar e responder as perguntas de forma inteligente
 - ✅ Oferece interações personalizadas com base nos dados pessoais fornecidos
 - ✅ Capacidade de buscar informações online para complementar as respostas
+- ❌ Capacidade de manipular e ler horários da minha agenda pessoal
+- ❌ Recurso de agendamento para enviar lembretes ou mensagens automatizadas em horários específicos
+- ❌ Integração com APIs externas para realizar tarefas específicas, como consultar o clima, buscar notícias, etc
+- ❌ Respostas multimídia, incluindo envio de imagens, vídeos ou arquivos relevantes
 
 ## Tecnologias Utilizadas
 
