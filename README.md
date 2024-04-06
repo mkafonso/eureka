@@ -51,7 +51,7 @@ python src/main.py
 
 ## Quer contribuir?
 
-Por favor, leia o nosso CODE_OF_CONDUCT para mais detalhes.
+Por favor, leia o nosso [`CODE_OF_CONDUCT.md`](CODE_OF_CONDUCT.md) para mais detalhes.
 
 ## Contribuidores
 
