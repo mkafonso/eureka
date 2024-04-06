@@ -1,2 +1,4 @@
-# Lê pares de chave-valor de um arquivo .env e configure-os como variáveis de ambiente
+flask==2.3.3
 python-dotenv==1.0.1
+slackeventsapi==3.0.1
+slack_sdk==3.27.1
