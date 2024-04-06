@@ -41,13 +41,9 @@ Para executar o bot, execute o arquivo `main.py`:
 python src/main.py
 ```
 
----
-
 ## Por que você fez isso?
 
 🚨 Este projeto é uma demonstração do poder das tecnologias de IA aplicadas à comunicação por chat, oferecendo um assistente virtual sofisticado com capacidades de aprendizado e personalização. Sinta-se à vontade para explorar, contribuir e adaptar o código conforme necessário para suas próprias aplicações!
-
----
 
 ## Quer contribuir?
 
