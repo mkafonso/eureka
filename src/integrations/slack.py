@@ -18,6 +18,6 @@ class SlackBot:
         except SlackApiError as e:
             print(f"Não consegui enviar a mensagem: {e.response['error']}")
 
-    def run(self, message="Hello world!", channel='#building-stuffs'):
+    def run(self, channel='#building-stuffs', message="Hello world!"):
         # Executa o bot enviando uma mensagem para um canal no Slack.
         self.send_message(channel=channel, message=message)
