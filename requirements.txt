@@ -1,0 +1,2 @@
+# Lê pares de chave-valor de um arquivo .env e configure-os como variáveis de ambiente
+python-dotenv==1.0.1
