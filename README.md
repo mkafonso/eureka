@@ -8,6 +8,7 @@ Eureka é um bot para Slack que utiliza tecnologias como LangChain e OpenAI para
 - ✅ Utiliza LangChain e OpenAI para processar e responder as perguntas de forma inteligente
 - ✅ Oferece interações personalizadas com base nos dados pessoais fornecidos
 - ✅ Capacidade de buscar informações online para complementar as respostas
+- ❌ Capacidade de ler dados de uma pasta com varios arquivos
 - ❌ Capacidade de manipular e ler horários da minha agenda pessoal
 - ❌ Recurso de agendamento para enviar lembretes ou mensagens automatizadas em horários específicos
 - ❌ Integração com APIs externas para realizar tarefas específicas, como buscar notícias, etc
@@ -35,7 +36,7 @@ pip3.11 install -r requirements.txt
   ```
   OPENAI_API_KEY=seu_token_da_open_ai
   ```
-- Carregue alguns arquivos na pasta `data`
+- Adicione algumas informações no arquivo `data.txt`
 
 ## Executando o Bot
 
