@@ -45,3 +45,47 @@ Please read our [`CODE_OF_CONDUCT.md`](CODE_OF_CONDUCT.md) for more details.
 ## Contributors
 
 - @mkafonso
+
+----------------------------------------------- 
+.
+.
+.
+.
+.
+.
+.
+# TESTES QUE FIZ RECENTEMENTE
+.
+.
+.
+.
+.
+.
+.
+----------------------------------------------- 
+
+
+* É tranquilo gerar esses embeddings com a OpenAI
+  
+![Screen Shot 2024-04-09 at 23 03 51](https://github.com/mkafonso/eureka/assets/73212666/e03e9105-c868-4675-b13a-bafee5ebfdec)
+
+
+* Depois de pegar o array dos números, precisamos salvar num banco de dados vetorial. Escolhi o SingleStore: https://www.singlestore.com/
+
+* Cria um workspace, database e depois uma tabela
+![Screen Shot 2024-04-09 at 22 58 37](https://github.com/mkafonso/eureka/assets/73212666/6070f530-0ca1-4f30-9444-0af4930f8d0f)
+
+  
+
+* Cadastrar os dados
+![Screen Shot 2024-04-09 at 23 21 18](https://github.com/mkafonso/eureka/assets/73212666/fffdf082-b034-4ba6-9e8f-b7e334676736)
+
+
+
+
+* Exagerei e quis subir todo script do filme Shrek 😅 e o modelo reclamou.
+
+![Screen Shot 2024-04-09 at 23 31 18](https://github.com/mkafonso/eureka/assets/73212666/8e3e5f73-4cd6-4b8e-b401-fc8976209f40)
+
+
+
