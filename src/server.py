@@ -6,41 +6,43 @@ from utils.events import handle_app_mention, slack_event_queue
 from utils.sanitizers import sanitize_slack_message
 import threading
 
-# Função para configurar o servidor Flask e o Slack Bot
+# Function to create Flask server and Slack Bot
 def create_app(slack_api_token, slack_signing_secret, openai_api_key):
     app = Flask(__name__)
 
-    # Instancia o SlackBot com o token da API do Slack
+    # Instantiate the SlackBot with Slack API token
     slack_bot = SlackBot(slack_api_token)
 
-    # Configura o adaptador de eventos do Slack para lidar com eventos POST em '/slack/events'
+    # Configure Slack event adapter to handle POST events at '/slack/events'
     slack_events_adapter = SlackEventAdapter(slack_signing_secret, "/slack/events", app)
 
+    # Initialize language chain model
     chain = initialize_langchain_model(openai_api_key, './data.txt')
 
-    # Define a rota para lidar com eventos do Slack
+    # Define route to handle Slack events
     @slack_events_adapter.on("app_mention")
     def handle_message(payload):
         handle_app_mention(payload)
 
-    # Função para processar assincronamente os eventos do Slack
+    # Function to asynchronously process Slack events
     def process_slack_events():
         while True:
-            # Obtem o próximo evento da fila (bloqueante)
+            # Get the next event from the queue (blocking)
             payload = slack_event_queue.get()
             event = payload.get('event', {})
             channel_id = event.get('channel')
             question = sanitize_slack_message(event.get('text'))
 
+            # Process the question using the language chain model
             response = process_langchain_query(chain, question, [])
 
-            # Processa a mensagem usando o SlackBot
+            # Use the SlackBot to send the processed message back to the channel
             slack_bot.run(channel=channel_id, message=response)
 
-            # Marca o evento como concluído na fila
+            # Mark the event as completed in the queue
             slack_event_queue.task_done()
 
-    # Inicia o processamento assíncrono dos eventos do Slack em uma thread separada
+    # Start asynchronous processing of Slack events in a separate thread
     processing_thread = threading.Thread(target=process_slack_events)
     processing_thread.start()
 
