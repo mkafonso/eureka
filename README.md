@@ -1,66 +1,47 @@
 # Eureka Slack Bot
 
-Eureka é um bot para Slack que utiliza tecnologias como LangChain e OpenAI para oferecer funcionalidades avançadas de conversação. O bot é alimentado com dados pessoais específicos, permitindo interações personalizadas e contextualmente relevantes. Além disso, ele é capaz de buscar referências na internet para enriquecer suas respostas e oferecer suporte mais abrangente.
+Eureka is a Slack bot that uses LangChain and OpenAI to have smart conversations. It learns from personal information to talk in a way that feels personal and makes sense. It can also search the internet to give better answers and help more effectively.
 
-## Demonstração do que temos até agora
+## Demo of Current Progress
 
-https://github.com/mkafonso/eureka/assets/73212666/0b9692b2-bc3d-48e1-bf4b-aa0b2a11cb11
+.
+.
+.
+.
 
-![Screen Shot 2024-04-06 at 17 38 38](https://github.com/mkafonso/eureka/assets/73212666/981d4ea8-99b7-4441-bb54-96d324b5fa51)
+## Key Features Developed So Far
 
+- ✅ The bot only responds when mentioned in the Slack channel
+- ✅ Utilizes LangChain and OpenAI to have intelligent conversations
+- ✅ Eureka learns from specific personal data to provide personalized and relevant interactions
+- ✅ Capable of fetching online information to supplement responses
+- ❌ Instead of fetching data from a local folder, Eureka will integrate with a vector database for improved performance and scalability
+- ❌ Ability to handle and read schedules from my personal calendar
+- ❌ Scheduling feature to send reminders or automated messages at specific times
+- ❌ Integration with external APIs to perform specific tasks, such as fetching news, etc
+- ❌ Multimedia responses, including sending relevant images, videos, or files
 
-## Principais recursos até agora
+## Technologies Used
 
-- ✅ O bot só responde quando é mencionado no canal do Slack
-- ✅ Utiliza LangChain e OpenAI para processar e responder as perguntas de forma inteligente
-- ✅ Oferece interações personalizadas com base nos dados pessoais fornecidos
-- ✅ Capacidade de buscar informações online para complementar as respostas
-- ❌ Capacidade de ler dados de uma pasta com varios arquivos
-- ❌ Capacidade de manipular e ler horários da minha agenda pessoal
-- ❌ Recurso de agendamento para enviar lembretes ou mensagens automatizadas em horários específicos
-- ❌ Integração com APIs externas para realizar tarefas específicas, como buscar notícias, etc
-- ❌ Respostas multimídia, incluindo envio de imagens, vídeos ou arquivos relevantes
+- LangChain: Framework for enabling intelligent conversations and natural language processing.
+- OpenAI: AI platform used for generating human-like text and understanding language.
+- Vector Database Integration: Utilizes a vector database for efficient data storage and retrieval, enhancing performance and scalability.
+- Slack SDK: Software development kit for building Slack integrations and bots.
+- Python: Programming language used for implementing Eureka's functionality.
+- Other Libraries and Tools: Additional dependencies specified in the requirements.txt file to support various features and functionalities of Eureka.
 
-## Tecnologias Utilizadas
+## Running the Bot
 
-- LangChain: Framework para processamento de linguagem natural
-- OpenAI: Plataforma de IA para geração de linguagem natural e aprendizado de máquina
-- Outras Bibliotecas e Ferramentas: Python e outras dependências que podem ser encontradas no arquivo `requirements.txt`
-
-## Configuração
-
-1. **Instalação das dependências:**
-
-```bash
-pip3.11 install -r requirements.txt
-```
-
-2. **Configuração das variáveis de ambiente:**
-
-- Crie um arquivo chamado `.env` na raiz do projeto com o mesmo conteúdo de `.env.example`
-- Defina as variáveis de ambiente necessárias no formato `CHAVE=VALOR`.
-  Exemplo:
-  ```
-  OPENAI_API_KEY=seu_token_da_open_ai
-  ```
-- Adicione algumas informações no arquivo `data.txt`
-
-## Executando o Bot
-
-Para executar o bot, execute o arquivo `main.py`:
+To run the bot, execute the `main.py` file:
 
 ```bash
 python src/main.py
 ```
 
-## Por que você fez isso?
+## Want to Contribute?
 
-🚨 Este projeto é uma demonstração do poder das tecnologias de IA aplicadas à comunicação por chat, oferecendo um assistente virtual sofisticado com capacidades de aprendizado e personalização. Sinta-se à vontade para explorar, contribuir e adaptar o código conforme necessário para suas próprias aplicações!
+Please read our [`CODE_OF_CONDUCT.md`](CODE_OF_CONDUCT.md) for more details.
 
-## Quer contribuir?
-
-Por favor, leia o nosso [`CODE_OF_CONDUCT.md`](CODE_OF_CONDUCT.md) para mais detalhes.
-
-## Contribuidores
+## Contributors
 
 - @mkafonso
